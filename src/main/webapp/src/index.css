@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-neutral-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+*::-webkit-scrollbar:hover {
+  @apply bg-gray-700/9;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  @apply bg-gray-700/50;
+  -webkit-border-radius: 100px;
+}
+
+*::-webkit-scrollbar-thumb:vertical:active {
+  @apply bg-gray-700/61;
+  -webkit-border-radius: 100px;
+}
+
+*::-webkit-scrollbar {
+  width: 0.4em;
+  overflow: visible;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+}
+
+*::-webkit-scrollbar-thumb {
+  overflow: visible;
+  border-radius: 4px;
+  @apply bg-gray-700/2;
+}
